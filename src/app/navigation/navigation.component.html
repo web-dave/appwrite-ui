@@ -1,0 +1,9 @@
+<div class="topnav">
+  @for (route of routes; track route.path) {
+    @if (route.data?.menuname) {
+      <a routerLinkActive="active" [routerLink]="route.path"
+        >{{ route.data?.menuname }}
+      </a>
+    }
+  }
+</div>

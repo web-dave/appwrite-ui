@@ -1,0 +1,11 @@
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="licensePlate">License Plate:</label>
+    <input id="licensePlate" type="text" formControlName="licensePlate" />
+  </div>
+  <div>
+    <label for="message">Message:</label>
+    <textarea id="message" formControlName="message" maxlength="400"></textarea>
+  </div>
+  <button type="submit">Send Message</button>
+</form>

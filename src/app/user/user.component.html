@@ -1,0 +1,11 @@
+@if (user$ | async; as user) {
+  <div class="card">
+    <img src="assets/img_avatar2.png" alt="Avatar" style="width: 100%" />
+    <div class="container">
+      <h4>
+        <b>{{ user.name }}</b>
+      </h4>
+      <p>{{ user.labels.join(", ") | uppercase }}</p>
+    </div>
+  </div>
+}

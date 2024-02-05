@@ -1,0 +1,20 @@
+<div class="login-form">
+  <p>
+    {{ loggedInUser ? "Logged in as " + loggedInUser.name : "Not logged in" }}
+  </p>
+
+  <pre>{{ loggedInUser | json }}</pre>
+
+  <div>
+    @if (!loggedInUser) {
+      <input type="email" placeholder="Email" [(ngModel)]="email" />
+      <input type="password" placeholder="Password" [(ngModel)]="password" />
+      <button class="primary" (click)="login(email, password)">Login</button>
+
+      <input type="text" placeholder="Name" [(ngModel)]="name" />
+      <button (click)="register(email, password, name)">Register</button>
+    } @else if (loggedInUser) {
+      <button class="primary" (click)="logout()">Logout</button>
+    }
+  </div>
+</div>
